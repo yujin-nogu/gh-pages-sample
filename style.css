@@ -391,7 +391,7 @@ html, body {
 }  
 
 .message .back-image {
-  background-image: url(en.svg);
+  background-image: src(en.svg);
   background-color:rgba(255,255,255,0.6);
   background-blend-mode:lighten;
   background-repeat: no-repeat;
