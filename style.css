@@ -391,7 +391,7 @@ html, body {
 }  
 
 .message .back-image {
-  background-image: src(en.svg);
+  background-image: url("en.svg");
   background-color:rgba(255,255,255,0.6);
   background-blend-mode:lighten;
   background-repeat: no-repeat;
@@ -467,7 +467,7 @@ html, body {
 @media (min-width:1170px) {
 
   .message .back-image {
-    background-image: url(img/en.svg);
+    background-image: url("en.svg");
     background-color:rgba(255,255,255,0);
     background-repeat: no-repeat;
     background-position: right 0px bottom 100px;
