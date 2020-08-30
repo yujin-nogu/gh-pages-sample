@@ -233,7 +233,6 @@ a:hover {
   width: 32px;
   height: 40px;
   cursor: pointer;
-  color: #6020b0;
 }
 
 .nav-button::before,
@@ -244,18 +243,18 @@ a:hover {
   background-color: currentColor;
   transform: translateY(5px);
   transition: 0.3s ease-in-out;
-}  
+}
 
 .nav-button::before {
   transform: translateY(-5px);
-  box-shadow: 0 6px currentColor;  
-}  
+  box-shadow: 0 6px currentColor;
+}
 
 
 /* ナビゲーション_閉じるボタン */
 .open .nav-button {
   z-index: 1000;
-  color: #ffffff;  
+  color: #ffffff;
 }
 
 
@@ -275,12 +274,13 @@ a:hover {
 @media (min-width: 1170px) {
   .nav-button {
     display: none;
-  }  
-}  
+  }
+}
 
 
 /* ナビゲーションメニュー：モバイル */
-html.open , .open body {
+html.open,
+.open body {
   height: 100%;
   overflow: hidden;
 }
@@ -304,14 +304,15 @@ html.open , .open body {
   left: 100%;
   width: 100%;
   height: 100vh;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: left 0.5s;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -337,7 +338,7 @@ html, body {
 /* メイン全体 */
 .body {
   margin: 0;
-  
+
 }
 
 
@@ -350,30 +351,13 @@ html, body {
 }
 
 
-.main h1 {
-  display: inline-block;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-
-@media (min-width: 900px) {
-  .main h1 {
-    margin-bottom: 38px;
-    font-size: 26px;
-    text-align: left;
-    letter-spacing: 0px;
-  }
-  
-}
-
 
 
 .main h2 {
   display: inline-block;
   margin-top: 30px;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .main h2+p {
@@ -388,15 +372,38 @@ html, body {
 .message {
   color: #333333;
   opacity: 1;
-}  
+}
+
+
+.message .hero {
+  display: inline-block;
+  font-size: 32px;
+  line-height: 1.68;
+  margin-bottom: 20px;
+
+}
+
+@media (min-width: 900px) {
+  .message .hero {
+    margin-bottom: 38px;
+    font-size: 32px;
+    line-height: 1.68;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 0px;
+  }
+
+}
+
+
 
 .message .back-image {
   background-image: url("en.svg");
-  background-color:rgba(255,255,255,0.6);
-  background-blend-mode:lighten;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
   background-repeat: no-repeat;
   background-position: left -100px bottom -200px;
-}  
+}
 
 
 
@@ -404,34 +411,36 @@ html, body {
 
 .message .container {
   display: flex;
-  justify-content: center;
   margin: 0 auto;
-}  
+}
 
 
 
 
 .message .concept {
   display: flex;
-  flex-direction: column;
   overflow: hidden;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   /* padding-top: 262px; */
-}  
+  margin-top: 131px;
+  margin-bottom: 113px;
+}
+
 
 
 
 .message .text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 100px;
+  justify-content: flex-start;
+  align-content: space-between;
   width: 100%;
-}  
+  text-align: left;
+}
+
 
 .message h4 {
   width: 100%;
-
 }
 
 
@@ -440,27 +449,24 @@ html, body {
 .message p {
   display: inline-block;
   margin-bottom: 32px;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.68;
   text-align: left;
   letter-spacing: 0px;
-}  
+}
 
 .message .btn {
   display: block;
-  margin: 0 auto;
-}  
+  margin: 0;
+}
 
 .message .img {
   display: block;
   justify-content: center;
   /* margin-top: 131px; */
-  width: 50%;
-}  
 
-.message img {
-  width: 100%;
-  max-width: 500px;
-}  
+}
+
 
 
 
@@ -468,25 +474,37 @@ html, body {
 
   .message .back-image {
     background-image: url("en.svg");
-    background-color:rgba(255,255,255,0);
+    background-color: rgba(255, 255, 255, 0);
     background-repeat: no-repeat;
-    background-position: right 0px bottom 100px;
-  }  
+    background-position: right -100px bottom 115px;
+  }
+
+  .message .container {
+    display: flex;
+
+  }
+
 
   .message .concept {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    max-height: 674px;
+    align-items: flex-start;
     padding: 0;
-  }  
+    width: 100%;
+  }
 
   .message .text {
+    display: flex;
     justify-content: flex-start;
-    margin-top: 168px;
-  }  
+    justify-content: space-between;
+  }
 
-}  
+
+  .message img {
+    max-width: 518px;
+    margin-left: auto;
+  }
+
+}
 
 
 
@@ -497,11 +515,6 @@ html, body {
 }
 
 
-.service p {
-  display: block;
-  font-size: 10px;
-  margin-bottom: 20px;
-}
 
 .service .detail {
   list-style: none;
@@ -518,6 +531,14 @@ html, body {
   display: inline-block;
   margin-bottom: 20px;
   font-size: 14px;
+  line-height: 1.71;
+}
+
+.service p {
+  display: block;
+  font-size: 10px;
+  margin-bottom: 20px;
+  line-height: 1.62;
 }
 
 .service img {
@@ -562,14 +583,14 @@ html, body {
     justify-content: space-between;
     margin-top: 50px;
   }
-  
+
   .service .flex .reverse {
     display: flex;
     flex-direction: row;
   }
-  
-  
-  
+
+
+
   .service .text {
     display: flex;
     flex-direction: column;
@@ -591,11 +612,13 @@ html, body {
 
   .service h4 {
     font-size: 24px;
+    line-height: 1.71;
   }
 
   .service p {
     display: block;
     font-size: 16px;
+    line-height: 1.62;
   }
 
 }
@@ -712,7 +735,8 @@ html, body {
   margin-top: 57px;
   border: 0.5px solid #e5e5e5;
   border-bottom: transparent;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.86;
   font-weight: bold;
 }
 
@@ -744,23 +768,10 @@ html, body {
   list-style: none;
 }
 
-.question h3 {
-  font-size: 10px;
-}
-
 
 
 .question .submenu.stay {
   display: block;
-}
-
-@media (min-width: 900px) {
-  .question .menu {
-    font-size: 14px;
-  }
-
-
-
 }
 
 
@@ -777,13 +788,15 @@ html, body {
 
 
 .blog .log .text h3 {
-  font-size: 16px;
+  line-height: 1.44;
+  font-size: 18px;
   margin-bottom: 15px;
 
 }
 
 .blog .log .text p {
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.625;
   margin-bottom: 30px;
 }
 
@@ -871,7 +884,7 @@ html, body {
 
 .work .swiper-wrapper {
   height: 100%;
-  
+
 }
 
 
@@ -906,6 +919,7 @@ html, body {
 
 .work .swiper-slide .text h3 {
   font-size: 16px;
+  line-height: 1.69;
   margin-bottom: 34px;
 }
 
@@ -940,14 +954,13 @@ html, body {
   color: #ffffff;
   display: inline-block;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 
 .contact h2+p {
   font-size: 16px;
   color: #ffffff;
-  margin-bottom: 30px;
 }
 
 .contact h3 {
@@ -957,6 +970,7 @@ html, body {
   font-size: 16px;
   margin-bottom: 33px;
 }
+
 .contact .form-container {
   width: 100%;
   margin: 0 auto;
@@ -1013,7 +1027,7 @@ html, body {
   margin-bottom: 25px;
 }
 
-.contact form .faq-text textarea{
+.contact form .faq-text textarea {
   display: block;
   background: #eefbfb 0% 0% no-repeat padding-box;
   border-radius: 3px;
@@ -1037,36 +1051,36 @@ html, body {
 
 /* PCのみ */
 @media (min-width: 900px) {
-  
+
   .contact {
     height: 1027px;
     padding-top: 54px;
     padding-bottom: 86px;
-    
+
   }
-  
-  
+
+
   .contact h2 {
     color: #ffffff;
     display: inline-block;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 32px;
   }
-  
+
   .contact h2+p {
     font-size: 16px;
     color: #ffffff;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
-  
+
   .contact h3 {
     display: inline-block;
     margin-top: 44px;
     color: #ffffff;
     font-size: 16px;
-    margin-bottom: 33px;
+    margin-bottom: 44px;
   }
-  
+
   .contact .form-container {
     width: 100%;
     margin: 0 auto;
@@ -1074,20 +1088,20 @@ html, body {
     overflow: visible;
     display: block;
   }
-  
-  
+
+
   .contact .form-container form {
     text-align: left;
     padding: 35px 62px 35px 63px;
   }
-  
+
   .contact form .label {
     display: flex;
     text-align: center;
     line-height: 30px;
     margin-bottom: 35px;
   }
-  
+
   .contact form .mark {
     display: inline-block;
     width: 60px;
@@ -1100,15 +1114,16 @@ html, body {
     color: #ffffff;
     margin-left: 22px;
   }
-  
-  
-  
+
+
+
   .contact form .btn {
     margin-top: 33px;
+    border: none;
   }
-  
-  
-  
+
+
+
   .contact form .input {
     display: block;
     background: #eefbfb 0% 0% no-repeat padding-box;
@@ -1119,9 +1134,10 @@ html, body {
     height: 43px;
     text-align: left;
     margin-bottom: 25px;
+
   }
-  
-  .contact form .faq-text textarea{
+
+  .contact form .faq-text textarea {
     display: block;
     background: #eefbfb 0% 0% no-repeat padding-box;
     border-radius: 3px;
@@ -1131,14 +1147,14 @@ html, body {
     height: 179px;
     margin-bottom: 32px;
   }
-  
+
   .contact form .accept {
     text-align: center;
-    
+    font-weight: bold;
   }
-  
-  
-  
+
+
+
 }
 
 
@@ -1164,8 +1180,8 @@ html, body {
   flex-direction: column;
 }
 
-.footer .site h1{
-  font-size: 16px;
+.footer .site h1 {
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -1182,12 +1198,13 @@ html, body {
   display: inline-block;
   /* margin-right: 15px; */
   margin-bottom: 15px;
+  font-weight: bold;
 }
 
 .footer .site .link .write {
   display: inline-block;
   /* margin-left: 15px; */
-
+  font-weight: bold;
 }
 
 .footer .site .copy {
@@ -1207,12 +1224,13 @@ html, body {
     padding-bottom: 50px;
     background-color: #f8f8f8;
   }
-  
+
+
   .footer .site {
     display: flex;
     flex-direction: column;
   }
-  
+
   .footer .site .link {
     padding-top: 30px;
     justify-content: center;
@@ -1220,18 +1238,22 @@ html, body {
     flex-direction: row;
     font-size: 16px;
   }
-  
+
+
+
 
   .footer .site .link .policy {
     display: inline-block;
     margin-right: 15px;
+    margin-bottom: 0;
   }
-  
+
   .footer .site .link .write {
     display: inline-block;
     margin-left: 15px;
+    margin-bottom: 0;
   }
-  
+
   .footer .site .copy {
     margin-top: 59px;
     text-align: center;
@@ -1239,9 +1261,6 @@ html, body {
     opacity: 1;
     font-size: 14px;
   }
-  
-  
-}  
 
 
-
+}
